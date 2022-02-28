@@ -1160,8 +1160,8 @@ program
         console.log('  The file name to save the exported data to must be provided as --file. If the file does');
         console.log('  not have file extension *.zip it will be appended.');
         console.log();
-        console.log('  If a file with the same name already exists on the instance, the export will not be done');
-        console.log('  and the existing file will not be overwritten.');
+        console.log('  If a file with the same name already exists on the instance, the export will overwite');
+        console.log('  the existing file.');
         console.log();
         console.log('  Examples:');
         console.log();
