@@ -301,7 +301,7 @@ program
 
 program
     .command('sandbox:hostname')
-    .description('Conver sandbox id to hostname')
+    .description('Convert sandbox id to hostname')
     .option('-i, --id <id>','id of sandbox whose hostname is to be returned')
     .action(function(options) {
         var id = ( options.id ? options.id : null ); 
