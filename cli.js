@@ -300,6 +300,26 @@ program
     });
 
 program
+    .command('sandbox:hostname')
+    .description('Conver sandbox id to hostname')
+    .option('-i, --id <id>','id of sandbox whose hostname is to be returned')
+    .action(function(options) {
+        var id = ( options.id ? options.id : null ); 
+        if (!id) {
+            this.missingArgument('id');
+            return;
+        }
+        require('./lib/sandbox').cli.hostname(id);
+    }).on('--help', function() {
+        console.log('');
+        console.log('  Examples:');
+        console.log();
+        console.log('    $ sfcc-ci sandbox:ips');
+        console.log('    $ sfcc-ci sandbox:ips --json');
+        console.log();
+    });
+
+program
     .command('sandbox:ips')
     .description('List inbound and outbound IP addresses for sandboxes')
     .option('-j, --json','Formats the output in json')
